@@ -1,0 +1,25 @@
+/* POSITION - MIXIN */
+
+@mixin translate($x, $y) {
+    transform: translate($x, $y);
+    -webkit-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+}
+
+@mixin translate-x($x) {
+    transform: translateX($x);
+    -webkit-transform: translateX($x);
+    -ms-transform: translateX($x);
+}
+
+@mixin translate-y($y) {
+    transform: translateY($y);
+    -webkit-transform: translateY($y);
+    -ms-transform: translateY($y);
+}
+                    
+@mixin transition($method, $time) {
+    -webkit-transition: $method $time;
+    -o-transition: $method $time;
+    transition: $method $time;
+}

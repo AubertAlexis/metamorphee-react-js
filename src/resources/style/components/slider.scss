@@ -1,0 +1,38 @@
+/* SLIDER - COMPONENTS */
+
+.slider {
+    position: relative;
+}
+
+.slick {
+    &-dots {
+        bottom: 65px;
+
+        li {
+            margin-right: 25px;
+
+            button::before {
+                opacity: 1;
+                color: $black;
+            }
+
+            &.slick-active {
+                button::before {
+                    color: $black;
+                    opacity: 1;
+                    font-size: 12px;
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &-arrow {
+        width: 17px;
+        height: 34px;
+        z-index: 1;
+    }
+}

@@ -1,0 +1,79 @@
+/* FORM - COMPONENTS */
+
+// BASE FORM STYLE
+.form {
+
+    &-group {
+        margin-bottom: 20px;
+    }
+
+    &-control {
+        width: 100%;
+        height: 48px;
+        background: $white;
+        padding: 0 20px;
+
+        font-size: 16px;
+        color: $black;
+        font-weight: 500;
+
+        border: none;
+        outline: 0;
+    }
+
+}
+
+// SELECT STYLE
+.select {
+    position: relative;
+    min-width: 70px;
+
+    &::after {
+        @include translate-y(-50%);
+        @include bg-image-size(23px, 23px);
+
+        content: "";
+        background: url("/resources/img/icons/dropdown-arrow.svg") no-repeat;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        pointer-events: none;
+    }
+}
+
+select {
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    border: none;   
+    color: $white;
+}
+
+option {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $white;
+}
+
+// TEXTAREA STYLE
+textarea.form-control {
+    padding: 15px 30px;
+    height: 230px;
+
+    &.resize {
+        resize: vertical;
+    }
+}
+
+// PLACEHOLDER DEFAULT COLOR
+@include placeholder($black)

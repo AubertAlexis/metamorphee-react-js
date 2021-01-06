@@ -1,0 +1,49 @@
+/* NAV - COMPONENTS */
+
+.nav {
+    width: 100%;
+
+    &-list {
+        @extend %flex-center-start
+    }
+
+    &-item {
+        margin-right: 55px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &-link {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1;
+        color: $black;
+    }
+}
+
+.nav-mobile {
+    display: none;
+
+    position: relative;
+    width: 20px;
+    height: 17px;
+    cursor: pointer;
+
+    @include bp-sm {
+        display: block;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 17px;
+    }
+
+    &__close {
+        position: absolute;
+        z-index: 1;
+
+        display: block;
+    }
+}

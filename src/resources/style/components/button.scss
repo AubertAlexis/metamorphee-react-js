@@ -1,0 +1,44 @@
+/* BUTTON - COMPONENTS */
+
+%btn {
+    @extend %flex-center-center;
+    @include transition(all, .5s);
+
+    width: 260px;
+    height: 75px;
+    
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 50px;
+
+    cursor: pointer;
+}
+
+.btn {
+    @extend %btn;
+
+    &-primary {
+        background: $primary-color;
+        color: $white;
+        border: 1px solid $primary-color;
+
+        &:hover {
+            background: $white;
+            color: $primary-color;
+            border: 1px solid $primary-color;
+        }
+    }
+
+    &-white {
+        background: $white;
+        color: $black;
+        border: 1px solid $white;
+
+        &:hover {
+            background: $black;
+            color: $white;
+            border: 1px solid $black;
+        }
+    }
+}

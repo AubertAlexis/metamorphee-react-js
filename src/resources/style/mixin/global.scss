@@ -1,0 +1,7 @@
+/* GLOBAL - MIXIN */
+
+@mixin bg-image-size($width, $height) {
+    background-size: $width $height;
+    width: $width;
+    height: $height;
+}
