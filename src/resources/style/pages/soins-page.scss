@@ -1,0 +1,19 @@
+.soins {
+
+    .block {
+
+        &.activity {
+
+            @include bp-xl {
+                padding-bottom: 350px;
+            }
+
+            @include bp-xs {
+                padding-bottom: 30px;
+            }
+
+        }
+
+    }
+
+}

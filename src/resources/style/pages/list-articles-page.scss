@@ -1,0 +1,71 @@
+/* CONFERENCE-DETAILS-PAGE - PAGES */
+
+.list-articles {
+
+    .header {
+
+        @include bp-xs {
+            height: 251px;
+        }
+
+        &__content {
+            text-align: left;
+        }
+        
+        &__title {
+            font-size: 74px;
+            line-height: 96px;
+
+            margin-top: 80px;
+
+            @include bp-xl {
+                font-size: 48px;
+                line-height: 72px;
+            }
+
+            @include bp-xs {
+                margin-top: 50px;
+                font-size: 26px;
+                line-height: 39px;
+                text-align: center;
+
+                max-height: 40px;
+                overflow-y: hidden;
+            }
+        }
+
+    }
+
+    .section {
+    
+        &__container {
+            max-width: 1230px;
+        }
+
+    }
+
+    .blog-list {
+    
+        &__title {
+            font-size: 32px;
+            line-height: 32px;
+
+            margin-bottom: 65px;
+
+            @include bp-xl {
+                margin-bottom: 38px;
+            }
+
+            @include bp-xs {
+                text-align: center;
+                font-size: 24px;
+                line-height: 20px;
+                font-weight: 500;
+
+                margin-bottom: 41px;
+            }
+        }
+
+    }
+
+}

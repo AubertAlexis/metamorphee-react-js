@@ -1,0 +1,30 @@
+/* ACCOMPAGNEMENT-DEUIL-PAGE - PAGES */
+
+.accompagnement-deuil {
+
+    .header {
+        &__title {
+            @include bp-xs {
+                margin-top: 25px;
+            }
+        }
+
+    }
+    
+    .block {
+
+        &.activity {
+
+            @include bp-xl {
+                padding-bottom: 350px;
+            }
+
+            @include bp-xs {
+                padding-bottom: 30px;
+            }
+
+        }
+
+    }
+
+}

@@ -8,7 +8,7 @@ const Input = ({
     id = false,
 }) => {
     return (
-        <input type={type} name={name ? name : ""} placeholder={placeholder} id={id ? id : ""} className={`form-control ${additionalClass}`}/>
+        <input type={type} name={name ? name : ""} placeholder={placeholder ? placeholder : ""} id={id ? id : ""} className={`form-control ${additionalClass}`}/>
     )
 }
 

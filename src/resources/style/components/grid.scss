@@ -1,9 +1,7 @@
 /* GRID - COMPONENTS */
-
 %container {
     width: 100%;
-    max-width: 1140px;
-    box-sizing: border-box;
+    max-width: 1090px;
 
     padding-right: 15px;
     padding-left: 15px;
@@ -14,6 +12,9 @@
 .container {
     @extend %container;
 
+    @include bp-xl {
+        max-width: 810px;
+    }
       
     @include bp-lg {
         max-width: 960px;
@@ -26,10 +27,43 @@
     @include bp-sm {
         max-width: 540px;
     }
-    
+
+    @include bp-xs {
+        max-width: 450px;
+
+        padding: 0 36px;
+        box-sizing: border-box;
+    }
+
     &-fluid {
         @extend %container;
 
         max-width: 100%;
+    }
+}
+
+.row {
+    display: flex;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    &.no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.full-padding {
+    padding: 0 $full-padding-gap;
+
+    @include bp-xl {
+        padding: 0 120px;
+    }
+
+    @include bp-xs {
+        padding: 0 36px;
     }
 }

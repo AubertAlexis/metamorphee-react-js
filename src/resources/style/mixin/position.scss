@@ -6,20 +6,54 @@
     -ms-transform: translate($x, $y);
 }
 
-@mixin translate-x($x) {
+@mixin resetPosition() {
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+
+    position: initial;
+}
+
+@mixin translateX($x) {
     transform: translateX($x);
     -webkit-transform: translateX($x);
     -ms-transform: translateX($x);
 }
 
-@mixin translate-y($y) {
+@mixin translateY($y) {
     transform: translateY($y);
     -webkit-transform: translateY($y);
     -ms-transform: translateY($y);
+}
+
+@mixin center() {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
                     
 @mixin transition($method, $time) {
     -webkit-transition: $method $time;
     -o-transition: $method $time;
     transition: $method $time;
+}
+
+@mixin display-flex-center-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin display-flex-center-y {
+    display: flex;
+    align-items: center;
+}
+
+@mixin display-flex-center-x {
+    display: flex;
+    justify-content: center;
 }

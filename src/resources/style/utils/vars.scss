@@ -1,11 +1,46 @@
-$primary-color: #4694FF;
-$secondary-color: #4694FF;
+// Custom
+$primary-color: #CAC0E0;
+$secondary-color: #A3D8D2;
 
+// Common
 $white: #ffffff;
-
 $black: #000000;
-$black-50: rgba($black, .5);
+$gray: #F8F8F8;
+$light-gray: #eaeaea;
+$dark-gray: #3E3E3E;
+$blue: #6F93F4;
+$brown: #6C6C6C;
 
-// -------------------------------------------
+$black-50: rgba(0, 0, 0, .5);
 
-$family: 'Montserrat';
+// Badge
+$badge-primary: #AB91FF;
+$badge-blue: #799FF5;
+$badge-orange: #F59A79;
+
+// Arrows
+$arrow-gray: #8B8B8B;
+
+// Button
+$btn-link: #cac0e0;
+
+$btn-purple: #CAC0E0;
+
+// Background
+$bg-primary: $primary-color;
+$bg-secondary: $secondary-color;
+$bg-white: $white;
+$bg-blue: #f5fbff;
+
+
+// Font
+$font-family-content: "Poppins"; 
+$font-family-titles: "Sophmore Year";
+
+$spacing: .5rem;
+
+// Other
+$full-padding-gap: 140px;
+$navigation-gap: 104px;
+
+$hr-color: #707070;

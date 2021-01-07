@@ -1,0 +1,242 @@
+/* WITH BANNER - COMPONENTS */
+
+.with-banner {
+    background: url("../../img/conference/banner.png") no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    .main {
+        padding: 80px 0;
+        background: $white;
+    }
+
+    .section {
+
+        & > .container {
+            @include bp-xl {
+                max-width: 860px;
+            }
+        }
+
+    }
+}
+
+.conference-details.with-banner, .conference-valid.with-banner {
+    @include bp-xl {
+        background-size: cover;
+    }
+
+    @include bp-xs {
+        background: url("../../img/conference/banner-responsive.png") no-repeat 50% 0;
+        background-size: 100% 33%;
+    }
+
+    .main {
+        @include bp-xl {
+            padding: 45px 0 60px 0;
+        }
+
+        @include bp-xs {
+            padding: 35px 0 45px 0;
+        }
+    }
+
+    .badge {
+        @include bp-xl {
+            margin-top: 20px;
+        }
+
+        @include bp-xs {
+            margin-top: 0;
+        }   
+    }
+}
+
+.conference-valid.with-banner {
+
+    .main {
+        @include bp-xl {
+            padding: 75px 0;
+        }
+
+        @include bp-xs {
+            padding: 35px 0 45px 0;
+        }
+    }
+
+}
+
+.article-details.with-banner {
+    background: url("../../img/article/banner.png") no-repeat;
+    background-size: cover;
+
+    @include bp-xl {
+        background-size: contain;
+    }
+
+    @include bp-xs {
+        background: url("../../img/article/banner-responsive.png") no-repeat 50% 0%;
+        background-size: 100% 32%;
+    }
+
+    .main {
+        padding: 90px 0;
+
+        @include bp-xl {
+            padding: 60px 0;
+        }
+
+        @include bp-xs {
+            padding: 45px 0;
+        }
+    }
+}
+
+.coaching-details.with-banner {
+    background: url("../../img/coaching/banner.png") no-repeat 0 60%;
+    background-size: cover;
+
+    @include bp-xl {
+        background: url("../../img/coaching/banner.png") no-repeat 0 100%;
+        background-size: cover;
+    }
+
+    @include bp-xs {
+        background: url("../../img/coaching/banner-responsive.png") no-repeat 50% 0;
+        background-size: 100% 40%;
+    }
+
+    .main {
+        padding: 90px 0;
+
+        @include bp-xs {
+            padding: 45px 0;
+        }
+    }
+}
+
+.list-articles.with-banner {
+    background: url("../../img/list-articles/banner.png") no-repeat 0 60%;
+    background-size: cover;
+
+    @include bp-xl {
+        background: url("../../img/list-articles/banner-responsive.png") no-repeat 0 100%;
+        background-size: cover;
+    }
+
+    @include bp-xs {
+        background: url("../../img/list-articles/banner-responsive.png") no-repeat 0% 0%;
+        background-size: 100% 33%;
+    }
+
+    .main {
+        @include bp-xl {
+            padding: 55px 0 130px 0;
+        }
+
+        @include bp-xs {
+            padding: 34px 0 66px 0;
+        }
+    }
+}
+
+.with-banner.activity {
+    .main {
+        padding: 80px 0 0 0;
+
+        @include bp-xs {
+            padding-top: 40px;
+        }
+    }
+}
+
+.metamorphose.with-banner {
+    background: url("../../img/metamorphose/banner.jpg") no-repeat 0 60%;
+    background-size: cover;
+
+    @include bp-xs {
+        background: url("../../img/metamorphose/banner-responsive.png") no-repeat 50% 0;
+        background-size: 100%;
+    }
+}
+
+.reki.with-banner {
+    background: url("../../img/reki/banner.jpg") no-repeat 0 140%;
+    background-size: cover;
+
+    @include bp-xl {
+        background: url("../../img/reki/banner.jpg") no-repeat 50% 90%;
+        background-size: auto;
+    }
+
+    @include bp-xs {
+        background: url("../../img/reki/banner-responsive.png") no-repeat 50% 0;
+        background-size: 100%;
+    }
+}
+
+.accompagnement-deuil.with-banner {
+    background: url("../../img/accompagnement-deuil/banner.jpg") no-repeat 0 140%;
+    background-size: cover;
+
+    @include bp-xl {
+        background: url("../../img/accompagnement-deuil/banner.jpg") no-repeat 50% 90%;
+        background-size: auto;
+    }
+
+    @include bp-xs {
+        background: url("../../img/accompagnement-deuil/banner-responsive.png") no-repeat 50% 0;
+        background-size: 100%;
+    }
+}
+
+.soins.with-banner {
+    background: url("../../img/soins/banner.jpg") no-repeat 0 140%;
+    background-size: cover;
+
+    @include bp-xl {
+        background: url("../../img/soins/banner.jpg") no-repeat 50% 90%;
+        background-size: auto;
+    }
+
+    @include bp-xs {
+        background: url("../../img/soins/banner-responsive.png") no-repeat 50% 0;
+        background-size: 100%;
+    }
+}
+
+.parfums.with-banner {
+    background: url("../../img/parfums/banner.jpg") no-repeat 0 140%;
+    background-size: cover;
+
+    @include bp-xl {
+        background: url("../../img/parfums/banner.jpg") no-repeat 50% 90%;
+        background-size: auto;
+    }
+
+    @include bp-xs {
+        background: url("../../img/parfums/banner-responsive.png") no-repeat 50% 0;
+        background-size: 100%;
+    }
+}
+
+.seances.with-banner {
+    background: url("../../img/seances/banner.jpg") no-repeat 0 140%;
+    background-size: cover;
+
+    @include bp-xl {
+        background: url("../../img/seances/banner.jpg") no-repeat 50% 90%;
+        background-size: auto;
+    }
+
+    @include bp-xs {
+        background: url("../../img/seances/banner-responsive.png") no-repeat 50% 0;
+        background-size: 100%;
+    }
+}
+
+.contact.with-banner {
+    background: url("../../img/parfums/banner.jpg") no-repeat 0 100%;
+    background-size: cover;
+    overflow-y: scroll;
+}

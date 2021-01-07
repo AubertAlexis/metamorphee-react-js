@@ -1,0 +1,73 @@
+/* COMMENT - COMPONENTS */
+
+.comment {
+    display: flex;
+    align-items: center;
+
+    @include bp-xl {
+        max-width: 563px;
+        align-items: flex-start;
+        
+        margin: 0 auto;
+    }
+
+    @include bp-xs {
+        max-width: auto;   
+    }
+
+    &__image {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: $primary-color;
+
+        margin-right: 55px;
+
+        @include bp-xl {
+            flex: 1 0 88px;
+            height: 88px;
+
+            margin-right: 53px;
+        }
+
+        @include bp-xs {
+            flex: 1 0 68px;
+            height: 68px;
+
+            margin-right: 10px;
+        }
+    }
+
+    &__text {
+        font-size: 24px;
+        font-weight: 500;
+        max-height: 77px;
+        margin-bottom: 10px 0;
+
+        width: 675px;
+        overflow-y: hidden;
+
+        @include bp-xl {
+            width: auto;
+            max-height: none;
+
+            font-size: 12.5px;
+        }
+
+        @include bp-xs {
+            font-size: 12px;
+        }
+    }
+
+    &__author {
+        font-family: $font-family-titles;
+        font-size: 64px;
+        font-weight: 500;
+
+        @include bp-xl {
+            font-size: 24px;
+            
+            margin-top: 10px;
+        }
+    }
+}

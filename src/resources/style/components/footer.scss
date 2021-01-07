@@ -1,5 +1,189 @@
 /* FOOTER - COMPONENTS */
 
 .footer {
-    background: #bdbdbd;
+    padding: 150px 0 90px 0;
+    background: $primary-color;
+
+    color: $white;
+
+    @include bp-xl {
+        padding: 50px 0 80px 0;
+    }
+
+    @include bp-xs {
+        padding: 52px 0;
+    }
+
+    a {
+        color: $white;
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-end;
+
+        @include bp-xs {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+    }
+
+    &__contact {
+        width: 760px;
+
+        @include bp-xl {
+            width: 500px;
+        }
+
+        @include bp-xs {
+            width: auto;
+        }
+
+        .footer {
+
+            &__items {
+                @include bp-xs {
+                    margin-bottom: 0;
+                }
+            }
+
+            &__section {
+                @include bp-xs {
+                    order: 1;
+
+                    margin-bottom: 30px;
+                }
+            }
+
+            &__address {
+                @include bp-xs {
+                    order: 2;
+
+                    margin-bottom: 0;
+                }
+
+                .footer__item {
+                    font-size: 18px;
+                }
+            }
+
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+
+        margin-bottom: 70px;
+
+        @include bp-xl {
+            margin-bottom: 40px;
+        }
+
+        @include bp-xs {
+            margin-bottom: 30px;
+
+            &.desktop {
+                display: none;
+            }
+        }
+
+        &.mobile {
+            display: none;
+
+            @include bp-xs {
+                display: block;
+            }
+        }
+
+        &.large {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 48px;
+
+            @include bp-xl {
+                font-size: 32px;
+            }
+        }
+    }
+
+    &__items {
+        display: flex;
+
+        @include bp-xs {
+            flex-direction: column;
+
+            margin-bottom: 30px;
+        }
+    }
+
+    &__section {
+        &:first-of-type {
+            margin-right: 130px;
+
+            @include bp-xl {
+                margin-right: 35px;
+            }
+
+            @include bp-xs {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__item {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
+
+        @include bp-xl {
+            font-size: 16px;
+        }
+
+        &.address {
+            font-weight: 500;
+
+            &:last-child {
+                @include bp-xs {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__utils {
+
+        .footer {
+
+            &__item {
+                margin-bottom: 6px;
+
+                &:last-child {
+                    padding-bottom: 7px;
+                }
+            }
+
+        }
+
+    }
+
+    &__logo {
+        background: $white;
+        text-align: center;
+        padding: 20px 0;
+        margin-bottom: 10px;
+
+        @include bp-xl {
+            margin-bottom: 0;
+        }
+        
+        &--img {
+            max-width: 238px;
+
+            @include bp-xl {
+                max-width: 146px;
+            }
+        }
+    }
+
 }

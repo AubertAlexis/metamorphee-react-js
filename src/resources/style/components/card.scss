@@ -1,3 +1,363 @@
 /* CARD - COMPONENTS */
 
-.card {}
+.card {
+    background: $white;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.card-event{
+    width: 332px;
+
+    @include bp-xl {
+        width: 225px;
+    }
+
+    &__image {
+        height: 234px;
+
+        @include bp-xl {
+            height: auto;
+            max-width: 225px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__body {
+        max-width: 332px;
+        box-sizing: border-box;
+        background: $bg-blue;
+        padding: 17px 17px 17px 25px;
+
+        @include bp-xl {
+            padding: 11px;
+            max-width: 225px;
+        }
+
+        @include bp-xs {
+            padding: 0px 17px 10px 17px;
+        }
+    }
+
+    &__badge {
+        text-align: center;
+        background: $badge-primary;
+        padding: 2px 9px;
+
+        color: $white;
+        font-size: 12px;
+        font-weight: 600;
+
+        border-radius: 50px;
+
+        @include bp-xl {
+            padding: 1px 6px;
+
+            font-size: 8px;
+        }
+
+        &.blue {
+            background: $badge-blue;
+        }
+
+        &.orange {
+            background: $badge-orange;
+        }
+    }
+
+    &__date, &__text {
+        color: $black;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    &__date {
+        margin-top: 20px;
+    }
+
+    &__text {
+        font-weight: 400;
+
+        @include bp-xl {
+            font-size: 10px;
+        }
+    }
+
+    &__footer {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__price {
+        font-size: 20px;
+        font-weight: 600;
+
+        color: $brown;
+
+        @include bp-xl {
+            font-size: 13px;
+        }
+    }
+
+    &__btn {
+        height: 35px;
+
+        font-size: 14px;
+
+        border-radius: 10px;
+
+        @include bp-xl {
+            box-sizing: border-box;
+            
+            width: 87px;
+            height: 24px;
+
+            border-radius: 10px;
+
+            font-size: 9px;
+        }
+    }
+}
+
+.card-space {
+    max-width: 398px;
+    text-align: center;
+
+    @include bp-xl {
+        max-width: 100%;
+    }
+
+    &__image {
+        margin-bottom: 20px;
+
+        &--img {
+            max-width: 226px;
+
+            @include bp-xl {
+                width: 147px;
+
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        
+        font-size: 64px;
+        font-family: $font-family-titles;
+        font-weight: 500;
+        line-height: 45px;
+
+        @include bp-xl {
+            font-size: 41px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 35px;
+
+        @include bp-xl {
+            font-size: 12px;
+
+            margin: 0 auto 90px auto;
+            max-width: 567px;
+        }
+
+        @include bp-xs {
+            margin: 0 auto 35px auto;
+            max-width: 100%;
+        }
+    }
+}
+
+.card-blog {
+    position: relative;
+
+    border-radius: 40px;
+
+    &__body {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+
+        color: $white;
+        padding: 54px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        @include bp-xl {
+            padding: 60px 33px 30px 33px;
+
+            justify-content: space-between;
+        }
+
+        @include bp-xs {
+            padding: 32px 60px 34px 24px;
+
+            justify-content: space-between;
+        }
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: 700;
+
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-weight: 500;
+
+        @include bp-xl {
+            font-size: 12px;
+        }
+    }
+
+    &__image {
+
+        &--img {
+            width: 510px;
+            height: 512px;
+
+            @include bp-xl {
+                width: 300px;
+                height: 396px;
+
+                object-fit: cover;
+                border-radius: 40px;
+            }
+        }
+
+    }
+}
+
+.card-list-blog {
+    display: flex;
+    align-items: center;
+    margin-bottom: 64px;
+
+    @include bp-xs {
+        flex-direction: column;
+
+        margin-bottom: 48px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__image-box {
+        width: 398px;
+        height: 247px;
+        flex-shrink: 0;
+
+        background: $black;
+
+        border-radius: 12px;
+
+        margin-right: 64px;
+
+        @include bp-xl {
+            width: 251px;
+
+            margin-right: 41px;
+        }
+
+        @include bp-xs {
+            margin-right: 0;
+            margin-bottom: 17px;
+
+            width: 100%;
+            height: 145px;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 40px;
+
+        max-width: 400px;
+
+        @include bp-xl {
+            max-width: 438px;
+
+            margin-bottom: 12px;
+        }
+
+        @include bp-xs {
+            width: 100%;
+            
+            font-size: 18px;
+            line-height: 24px;
+
+            margin-bottom: 0;
+        }
+    }
+
+    &__text {
+        color: $black-50;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 32px;
+
+        margin-bottom: 15px;
+
+        @include bp-xl {
+            max-width: 450px;
+            max-height: 70px;
+            overflow-y: hidden;
+
+            margin-bottom: 23px;
+        }
+
+        @include bp-xs {
+            width: 100%;
+
+            font-size: 13.5px;
+            line-height: 24px;
+
+            margin-bottom: 11px;
+            max-height: 54px;
+        }
+    }
+
+    &__btn {
+        border-width: 2px;
+        border-radius: 15px;
+
+        width: 258px;
+        height: 73px;
+
+        box-sizing: border-box;
+
+        @include bp-xl {
+            width: 203px;
+            height: 53px;
+            font-size: 16px;
+            border-radius: 8px;
+        }
+
+        @include bp-xs {
+            width: 146px;
+            height: 32px;
+            font-size: 10px;
+            border-radius: 7px;
+            border-width: 1px;
+            font-weight: 500;
+
+            margin: 0 auto;
+        }
+    }
+
+}

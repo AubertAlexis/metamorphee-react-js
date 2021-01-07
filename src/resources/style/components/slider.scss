@@ -1,38 +1,154 @@
 /* SLIDER - COMPONENTS */
+$arrow-size: 66px;
 
 .slider {
     position: relative;
-}
 
-.slick {
-    &-dots {
-        bottom: 65px;
+    overflow-y: hidden;
 
-        li {
-            margin-right: 25px;
+    .slide-item {
+        position: relative;
+    }
 
-            button::before {
-                opacity: 1;
-                color: $black;
-            }
+    .slide-content {
+        @include translateY(-50%);
 
-            &.slick-active {
-                button::before {
-                    color: $black;
-                    opacity: 1;
-                    font-size: 12px;
-                }
-            }
+        position: absolute;
+        top: calc(50% - #{$navigation-gap});
+        z-index: 1;
+        
+        @include bp-xl {
+            top: 50%;
+        }
 
-            &:last-child {
-                margin-right: 0;
+        @include bp-xs {
+            top: calc(50% - 75px);
+        }
+
+        .container-fluid {
+            @include bp-xs {
+                width: auto;
             }
         }
     }
 
-    &-arrow {
-        width: 17px;
-        height: 34px;
+    .slide-title {
+        color: $white;
+        font-size: 101px;
+        font-weight: 700;
+        max-width: 80%;
+
+        @include bp-xl {
+            font-size: 86px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            line-height: 95px;
+        }
+
+        @include bp-xs {
+            font-size: 32px;
+            line-height: 35px;
+            max-width: 100%;
+        }
+    }
+
+    .slide-text {
+        color: $white;
+        font-size: 64px;
+
+        font-family: $font-family-titles;
+        font-weight: 500;
+
+        @include bp-xl {
+            font-size: 32px;
+        }
+    }
+
+    .slide-btn {
+        position: absolute;
+        bottom: $full-padding-gap;
+        left: 140px;
+
+        &.desktop {
+            @include bp-xl {
+                display: none;
+            }
+        }
+
+        &.tablet {
+            display: none;
+
+            @include bp-xl {
+                @include resetPosition();
+
+                display: flex;
+
+                margin-top: 35px;
+            }
+
+            @include bp-xs {
+                display: none;
+            }
+        }
+
+        &.mobile {
+            @include bp-xs {
+                @include translateX(-50%);
+                
+                display: flex;
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+            }
+        }
+
+    }
+
+    .slide-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         z-index: 1;
+    }
+
+    .arrow {
+        position: absolute;
+        z-index: 1;
+    
+        background: $white;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        width: $arrow-size;
+        height: $arrow-size;
+    
+        cursor: pointer;
+    
+        &-img {
+            margin: 27px 0 0 22px;
+        }
+    }
+
+    &.inline-arrows {
+        overflow-y: initial;
+
+        .arrow {
+            @include translateY(-50%);
+
+            top: 50%;
+
+            background: transparent;
+            border-color: $white;
+            
+            &-left {
+                left: calc(-#{$arrow-size} + -67px);
+            }
+
+            &-right {
+                right: calc(-#{$arrow-size} + -67px);
+            }
+        }
+
     }
 }

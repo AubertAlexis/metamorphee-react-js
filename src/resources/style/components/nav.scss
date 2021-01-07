@@ -1,14 +1,42 @@
 /* NAV - COMPONENTS */
 
 .nav {
-    width: 100%;
+    
+    &-content {
+        display: flex;
 
-    &-list {
-        @extend %flex-center-start
+        padding: 0;
+
+        @include bp-xl {
+            display: none;
+        }
+
+        &.open {
+            display: block;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            width: 185px;
+            box-sizing: border-box;
+            background: $white;
+            padding: 30px 15px;
+            border-radius: 7px;
+            z-index: 1;
+
+            @include bp-xl {
+                right: 100px;
+            }
+
+            @include bp-xs {
+                right: 0px;
+            }
+        }
     }
 
     &-item {
-        margin-right: 55px;
+        margin-right: 60px;
 
         &:last-child {
             margin-right: 0;
@@ -16,34 +44,12 @@
     }
 
     &-link {
-        font-size: 18px;
         font-weight: 600;
-        line-height: 1;
-        color: $black;
-    }
-}
+        color: $black-50;
 
-.nav-mobile {
-    display: none;
-
-    position: relative;
-    width: 20px;
-    height: 17px;
-    cursor: pointer;
-
-    @include bp-sm {
-        display: block;
+        @include bp-xl {
+            font-size: 14px;
+        }
     }
 
-    &__icon {
-        width: 20px;
-        height: 17px;
-    }
-
-    &__close {
-        position: absolute;
-        z-index: 1;
-
-        display: block;
-    }
 }

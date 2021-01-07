@@ -1,3 +1,420 @@
+/* HOME-PAGE - PAGES */
+
 .home {
 
+    .about {
+        background: $bg-blue;
+        padding: 135px 0 185px 0;
+
+        @include bp-xl {
+            padding: 55px 0 145px 0;
+        }
+
+        @include bp-xs {
+            padding: 45px 0 70px 0;
+        }
+
+        &__title {
+            margin-bottom: 63px;
+
+            @include bp-xl {
+                margin-bottom: 25px;
+            }
+        }
+
+        &__content {
+            @include display-flex-center-all;
+
+            @include bp-xl {
+                align-items: flex-start;
+            }
+
+            @include bp-xs {
+                flex-wrap: wrap;
+                justify-content: left;
+            }
+        }
+
+        &__img {
+            flex: none;
+            margin-right: 72px;
+
+            max-width: 260px;
+
+            @include bp-xl {
+                margin-right: 55px;
+
+                max-width: 147px;
+            }
+
+            @include bp-xs {
+                margin-right: 0;
+
+                margin-bottom: 48px;
+            }
+        }
+
+        &__text {
+
+            &--item {
+                color: $dark-gray;
+                margin-bottom: 25px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                
+                @include bp-xl {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        &__btn {
+            @include bp-xl {
+               font-size: 14px;
+
+               &::after {
+                   top: calc(50% + 2px);
+               }
+            }
+
+            &--box {
+                margin-top: 70px;
+
+                text-align: right;
+
+                @include bp-xl {
+                    margin-top: 35px;
+                }
+
+                @include bp-xs {
+                    display: none;
+                }
+            }
+
+        }
+
+    }    
+
+    .event {
+        background: transparent;
+        padding: 95px 0 110px 0;
+
+        @include bp-xs {
+            padding: 85px 0 45px 0;
+        }
+
+        @include bp-xs {
+            padding: 50px 0 40px 0;
+        }
+
+        &__title {
+            @include bp-xl {
+                font-size: 64px;
+            }
+        }
+
+        &__cards {
+            margin-top: 90px;
+
+            @include bp-xs {
+                width: 600px;
+                overflow-x: visible;
+                
+                margin-top: 40px;
+            }
+
+            &--btn {
+                margin: 0 auto;
+                
+                &-box {
+                    margin-top: 65px;
+
+                    @include bp-xl {
+                        margin-top: 48px;
+                    }
+                }
+            }
+        }
+
+        .slide-item {
+            height: auto;
+
+            margin: 0 16px;
+
+            @include bp-xl {
+                margin: 0 22px;
+            }
+
+            @include bp-xs {
+                margin: 0 4.5px;
+            }
+        }
+    }
+
+    .space {
+        background: $white;
+        padding: 150px 0;
+
+        @include bp-xl {
+            padding: 35px 0 120px 0;
+        }
+
+        &__cards {
+            margin-top: 80px;
+
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .slider .arrow {
+            position: relative;
+            width: auto;
+            height: auto;
+            background: transparent;
+            border: none;
+        }
+    }
+
+    .blog {
+        padding: 140px 0 58px 0;
+
+        background: $bg-blue;
+
+        @include bp-xl {
+            padding: 48px 0;
+        }
+
+        &__title {
+            @include bp-xl {
+                font-size: 64px;
+            }
+        }
+
+        &__subtitle {
+            @include bp-xl {
+                margin-top: 20px;
+
+                font-size: 14px;
+            }
+        }
+
+        &__cards {
+            margin-top: 110px;
+
+            @include bp-xl {
+                margin-top: 50px;
+            }
+        }
+
+        &__more {
+            height: 73px;
+            width: 260px;
+
+            margin: 60px auto 0 auto;
+
+            @include bp-xl {
+                width: 195px;
+                height: 44px;
+                border-radius: 15px;
+                font-size: 14px;
+
+                margin-top: 25px;
+            }
+
+            @include bp-xs {
+                width: 147px;
+                height: 41px;
+                border-radius: 6px;
+                font-size: 12px;
+
+                margin-top: 40px;
+            }
+        }
+
+        .slider-blog {
+            @include bp-xl {
+                max-width: 618px;
+
+                margin: 0 auto;
+            }
+        }
+
+        .slide-item {
+           margin: 0 17px; 
+
+            @include bp-xl {
+                margin: 0 4px;
+            }
+
+            @include bp-xs {
+                margin: 0 1.5px;
+            }
+        }
+
+        .arrow {
+            border-color: $arrow-gray;
+
+            @include bp-xl {
+                width: 57px;
+                height: 57px;
+            }
+
+            .arrow-img {
+                @include bp-xl {
+                    margin: 23px 0 0 16px;
+                }
+            }
+
+            &-left {
+                @include translateX(50%);
+
+                left: -135px;
+            }
+
+            &-right {
+                @include translateX(-50%);
+
+                right: -135px;
+            }
+        }
+
+        .section__subtitle {
+            @include bp-xs {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .newsletter {
+        background: $bg-blue;
+        padding: 57px 0 100px 0;
+
+        @include bp-xl {
+            padding: 0 0 50px 0;
+        }
+
+        &__title {
+            font-family: $font-family-content;
+            font-size: 32px;
+            font-weight: 600;
+
+            text-align: center;
+
+            @include bp-xl {
+                font-size: 18px;
+            }
+        }
+
+        &__content {
+            background: $white;
+
+            width: 536px;
+            border-radius: 40px;
+            box-sizing: border-box;
+
+            margin: 39px auto 0 auto;
+            padding: 25px 50px 40px 50px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            @include bp-xl {
+                width: 422px;
+                border-radius: 22px;
+
+                margin: 10px auto 0 auto;
+
+                padding: 13px 25px 25px 31px;
+            }
+
+            @include bp-xs {
+                width: auto;
+
+                padding: 13px 25px 25px;
+            }
+
+            &--btn {
+                height: 48px;
+                font-size: 16px;
+
+                @include bp-xl {
+                    height: 32px;
+                    font-size: 12px;
+                    flex: 1 0 83px;
+
+                    margin-left: 25px;
+                }
+
+                @include bp-xs {
+                    margin-left: 10px;
+                }
+            }
+
+            &--input {
+                width: 292px;
+                margin-bottom: 0;
+
+                @include bp-xl {
+                    width: auto;
+                }
+
+                input {
+                    background: $white;
+                }
+            }
+        }
+    }
+
+    .notice {
+        background: $white;
+
+        padding: 180px 0;
+
+        @include bp-xl {
+            padding: 70px 0;
+        }
+
+        @include bp-xs {
+            padding: 70px 0 50px 0;
+        }
+
+        .arrow {
+
+            @include bp-xl {
+                width: auto;
+                height: auto;
+
+                border-color: transparent
+            }
+
+            .arrow-img {
+                @include bp-xl {
+                    margin: 0;
+                }
+            }
+    
+            &-left {
+                left: calc(-#{$arrow-size} + -163px);
+
+                @include bp-xl {
+                    @include translate(-50%, -50%);
+
+                    left: 0;
+                }
+            }
+
+            &-right {
+                right: calc(-#{$arrow-size} + -163px);
+
+                @include bp-xl {
+                    @include translate(50%, -50%);
+
+                    right: 0;
+                }
+            }
+        }
+    }
 }

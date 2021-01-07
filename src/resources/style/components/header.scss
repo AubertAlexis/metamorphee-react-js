@@ -1,5 +1,210 @@
 /* HEADER - COMPONENTS */
 
 .header {
-   background: #9ae7ff;
+    height: 100vh;
+    overflow: hidden;
+
+    .top-bar {
+        width: auto;
+
+        @include bp-xl {
+            padding: 0;
+        }
+
+        &__content {
+            @include display-flex-center-y;
+
+            background: white;
+            border-radius: 10px;
+            padding: 10px 70px 10px 30px;
+
+            justify-content: space-between;
+
+            @include bp-xl {
+                padding: 12px 120px;
+
+                border-radius: 0;
+            }
+            
+            @include bp-xs {
+                padding: 12px 36px;
+            }
+
+        }
+
+        &__logo {
+
+            &--img {
+                max-width: 289px;
+                
+                @include bp-xl {
+                    max-width: 146px;
+                }
+            }
+
+        }
+
+        &__nav {
+
+            &-burger {
+                display: none;
+                cursor: pointer;
+    
+                @include bp-xl {
+                    display: block;
+                }
+            }
+
+            &-close {
+                display: none;
+                cursor: pointer;
+
+                position: absolute;
+                top: 28px;
+                right: 38px;
+
+                z-index: 2;
+
+                &--close {
+                    max-width: 13px;
+                }
+
+                &.open {
+                    @include bp-xl {
+                        display: block;
+
+                        right: 120px;
+                    }
+
+                    @include bp-xs {
+                        top: 28px;
+                        right: 38px
+                    }
+                }
+            }
+
+        }
+    }
+
+    .slider {
+
+        .slide-item {
+            height: calc(100vh - #{$navigation-gap});
+        }
+
+        .arrow {
+            bottom: calc(#{$full-padding-gap} - 1px);
+
+            @include bp-xl {
+                bottom: 50px;
+            }
+
+            &-left {
+                right: calc(#{$full-padding-gap} + 20px + #{$arrow-size});
+            }
+        
+            &-right {
+                right: $full-padding-gap;
+            }
+        }
+
+    }
+
+}
+
+.with-banner .header {
+    height: 615px;
+
+    @include bp-xl {
+        height: 486px;
+    }
+
+    @include bp-xs {
+        height: 212px;
+    }
+
+    &__content {
+        color: $white;
+        text-align: center;
+    }
+
+    &__title {
+        margin-top: 175px;
+
+        @include bp-xl {
+            margin: 170px auto 0 auto;
+
+            font-size: 48px;
+        }
+
+        @include bp-xs {
+            margin: 45px auto 0 auto;
+
+            font-size: 26px;
+
+            max-width: 260px;
+        }
+    }
+
+    &__btn {
+
+        &--article {
+            margin-top: 35px;
+
+            @include bp-xl {
+                width: 203px;
+                height: 53px;
+
+                font-size: 16px;
+            }
+
+            @include bp-xs {
+                margin: 8px auto 0 auto;
+                
+                width: 147px;
+                height: 41px;
+                border-radius: 6px;
+                font-size: 12px;
+            }
+        }
+
+    }
+}
+
+.with-banner.coaching-details .header, .with-banner.article-details .header {
+    @include bp-xl {
+        height: 483px;
+    }
+
+    @include bp-xs {
+        height: 255px;
+    }
+}
+
+.with-banner.coaching-details .header {
+    @include bp-xs {
+        &__title {
+            margin-top: 60px;
+        }
+    }
+}
+
+.with-banner.conference-details .header, .with-banner.conference-valid .header {
+    @include bp-xl {
+        height: 394px;
+
+        &__title {
+            margin-top: 90px;
+        }
+    }
+
+    @include bp-xs {
+        height: 230px;
+
+        &__title {
+            margin-top: 40px;
+            
+            max-width: 100%;
+        }
+    }
 }

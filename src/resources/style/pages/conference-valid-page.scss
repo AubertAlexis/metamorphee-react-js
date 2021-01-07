@@ -1,0 +1,54 @@
+/* CONFERENCE-VALID-PAGE - PAGES */
+
+.conference-valid {
+
+    .main {
+
+        padding-bottom: 220px;
+
+    }
+
+    .section {
+
+        &__header {
+            margin-bottom: 70px;
+
+            @include bp-xs {
+                margin-bottom: 25px;
+            }
+    
+        }
+
+        &__body, &__footer {
+            width: 260px;
+            margin: 0 auto;
+
+            @include bp-xl {
+                width: 280px;
+            }
+
+            @include bp-xs {
+                width: 260px;
+            }
+        }
+
+        &__footer {
+            margin-top: 55px;
+        }
+
+        &__btn {
+
+            @include bp-xs {
+                width: 166px;
+                height: 48px;
+
+                font-size: 14px;
+
+                border-radius: 14px;
+            }
+    
+        }
+
+    }
+
+}

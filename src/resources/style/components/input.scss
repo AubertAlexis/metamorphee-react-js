@@ -1,79 +1,184 @@
-/* FORM - COMPONENTS */
+/* INPUT - COMPONENTS */
 
-// BASE FORM STYLE
 .form {
 
     &-group {
-        margin-bottom: 20px;
+        margin-bottom: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        label {
+            display: block;
+            
+            font-size: 12px;
+            color: $black;
+            font-weight: 600;
+
+            margin-bottom: 8px;
+
+            @include bp-xl {
+                font-size: 16px;
+            }
+
+            @include bp-xs {
+                font-size: 12px;
+            }
+        }
+
+        &.multiple {
+            margin-top: 30px;
+        }
     }
 
     &-control {
         width: 100%;
         height: 48px;
-        background: $white;
-        padding: 0 20px;
-
-        font-size: 16px;
+        background: $gray;
         color: $black;
-        font-weight: 500;
+        padding: 0 20px;
+        font-size: 12px;
 
         border: none;
-        outline: 0;
+        border-radius: 15px;
+        box-sizing: border-box;
     }
 
 }
 
-// SELECT STYLE
-.select {
-    position: relative;
-    min-width: 70px;
+.multiple-choices {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    &::after {
-        @include translate-y(-50%);
-        @include bg-image-size(23px, 23px);
+.radio-choice {
+    background: $gray;
+    color: $black-50;
+    width: 76px;
+    height: 48px;
+    border-radius: 15px;
 
-        content: "";
-        background: url("/resources/img/icons/dropdown-arrow.svg") no-repeat;
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    cursor: pointer;
+
+    label {
+        margin-bottom: 0;
+
+        cursor: pointer;
     }
+
+    input {
+        display: none;
+    }
+
+    &.selected {
+        background: $primary-color;
+
+        label {
+            color: $white;
+        }
+    }
+
 }
 
-select {
-    width: 100%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    border: none;   
-    color: $white;
+.newsletter {
+
+    .form {
+
+        &-group {
+
+            label {
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 10px;
+
+                @include bp-xl {
+                    font-size: 12px;
+                }
+            }
+
+        }
+
+        &-control {
+            border: 1px solid $black;
+            border-radius: 15px;
+            height: 48px;
+
+            @include bp-xl {
+                height: 32px;
+                border-radius: 50px;
+            }
+        }
+    }
+
 }
 
-option {
-    font-family: inherit;
-    font-size: inherit;
-}
+.contact {
 
-select::-ms-expand {
-    display: none;
+    .form {
+
+        &-group {
+            margin-bottom: 25px;
+        }
+
+        &-control {
+            height: 65px;
+            border-radius: 0;
+
+            padding-left: 32px;
+
+            color: $black;
+            font-size: 18px;
+            font-weight: 500;
+
+            @include bp-xs {
+                font-size: 14px;
+                padding-left: 14px;
+            }
+        }
+
+    }
+
+    textarea.form-control {
+        padding-top: 15px;
+        height: 230px;
+        resize: vertical;
+    }
+
+    
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color:    $black;
+    }
+
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    $black;
+        opacity:  1;
+    }
+
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:    $black;
+        opacity:  1;
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color:    $black;
+    }
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color:    $black;
+    }
+
+    ::placeholder { /* Most modern browsers support this now. */
+        color:    $black;
+    }
 }
 
 select:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 $white;
 }
-
-// TEXTAREA STYLE
-textarea.form-control {
-    padding: 15px 30px;
-    height: 230px;
-
-    &.resize {
-        resize: vertical;
-    }
-}
-
-// PLACEHOLDER DEFAULT COLOR
-@include placeholder($black)

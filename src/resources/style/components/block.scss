@@ -1,0 +1,352 @@
+/* BLOCK - COMPONENTS */
+
+.block {
+    margin-bottom: 90px;
+
+    &.no-gap {
+        margin-bottom: 0;
+    }
+
+    &.activity-gap {
+        margin-bottom: 150px;
+
+        @include bp-xl {
+            margin-bottom: 0;
+
+            padding-bottom: 60px;
+        }
+
+        @include bp-xs {
+            padding-bottom: 30px;
+        }
+    }
+
+    &__title {
+        font-size: 64px;
+        font-weight: 500;
+        font-family: $font-family-titles;
+        color: $black;
+        line-height: 82px;
+
+        margin-bottom: 40px;
+
+        @include bp-xl {
+            margin-bottom: 10px;
+        }
+
+        @include bp-xs {
+            text-align: center;
+
+            font-family: $font-family-titles;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 32px;
+
+            margin-bottom: 30px;
+        }
+
+        &.no-gap {
+            margin-bottom: 0;
+        }
+
+        &.raw {
+            font-size: 48px;
+            font-family: $font-family-content;
+            font-weight: 700;
+
+            @include bp-xl {
+                font-family: $font-family-titles;
+                font-size: 64px;
+                font-weight: 500;
+                line-height: 82px;
+            }
+
+            @include bp-xs {
+                text-align: center;
+
+                font-size: 32px;
+                line-height: 32px;
+            }
+        }
+
+        &.large {
+            font-size: 96px;
+
+            @include bp-xs {
+                font-size: 32px;
+                text-align: left;
+
+                line-height: 40px;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 600;
+        color: $dark-gray;
+        line-height: 25px;
+
+        margin: 60px 0 30px 0;
+
+        @include bp-xs {
+            font-size: 14px;
+
+            margin: 40px 0 30px 0;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: 400;
+        color: $dark-gray;
+        line-height: 25px;
+
+        margin-bottom: 30px;
+
+        @include bp-xs {
+            font-size: 12px;
+
+            line-height: 18px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.top-gap {
+            margin-top: 25px;
+        }
+
+        &.bold {
+            font-size: 18px;
+            font-weight: 500;
+            color: $black;
+        }
+    }
+
+    &__image {
+        max-width: 1090px;
+
+        @include bp-xl {
+            max-width: 100%;
+        }
+    }
+
+    &__btn {
+        font-weight: 500;
+
+        @include bp-xl {
+            font-size: 16px;
+
+            border-width: 1px;
+            border-radius: 7px;
+
+            width: 275px;
+            height: 46px;
+        }
+
+        @include bp-xs {
+            font-size: 10px;
+
+            width: 146px;
+            height: 32px;
+        }
+    }
+
+    &__hr {
+        background: $hr-color;
+        margin: 30px 0;
+
+        &.little-top-gap {
+            margin-top: 15px;
+        }
+    }
+
+    &__table-row {
+        display: flex;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .block {
+
+            &__text {
+
+                @include bp-xs {
+                    font-size: 14px;
+                    flex: 0 0 32px;
+                }
+
+                &:first-child {
+                    margin-right: auto;
+
+                    @include bp-xs {
+                        flex: 0 0 200px;
+                        font-size: 12px;
+
+                        margin-right: 0;
+                    }
+                }
+
+                &.bold {
+                    margin-right: 95px;
+                    margin-bottom: 0;
+
+                    @include bp-xs {
+                        margin-right: 20px;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+    &.image-text {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include bp-xl {
+            align-items: flex-start;
+
+            margin-bottom: 25px;
+        }
+
+        .block {
+
+            &__image {
+                @include bp-xl {
+                    max-width: 350px;
+                    object-fit: contain;
+                }
+
+                @include bp-xs {
+                    max-width: 100%;
+                    object-fit: none;
+                }
+            }
+
+            &__text {
+                flex: 0 0 515px;
+
+                @include bp-xl {
+                    flex: 0 0 423px;
+                }
+
+                @include bp-xs {
+                    flex: 0 0 100%;
+                }
+            }
+
+        }
+    }
+
+}
+
+.activity .block {
+    position: relative;
+
+    &__text {
+
+        &:last-of-type {
+            padding-bottom: 140px;
+            margin-bottom: 0;
+
+            @include bp-xl {
+                padding-bottom: 96px;
+            }
+        }
+
+    }
+
+    &__btn {
+        @include translateX(-50%);
+        
+        position: absolute;
+        bottom: -36px;
+        margin: 0 auto;
+        left: 50%;
+
+        @include bp-xl {
+            @include resetPosition();
+        }
+    }
+
+}
+
+.activity.seances .block {
+
+    &.activity-gap {
+        margin-bottom: 50px;
+
+        @include bp-xl {
+            margin-bottom: 0;
+
+            padding-bottom: 310px;
+        }
+
+        @include bp-xs {
+            margin-bottom: 0;
+
+            padding-bottom: 30px;
+        }
+    }
+
+    &__text {
+
+        &:last-of-type {
+            padding-bottom: 120px;
+        }
+
+    }
+
+    &__table-row {
+
+        .block {
+
+            &__text {
+
+                &.bold {
+
+                    &:first-child {
+                        margin-right: auto;
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+}
+
+.coaching-details .block, .article-details .block {
+
+    @include bp-xs {
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        @include bp-xs {
+            text-align: left;
+        }
+    }
+
+    &__image + .block__text {
+        @include bp-xs {
+            margin-top: 20px;
+
+            flex: 0 0 100%
+        }
+    }
+
+}
